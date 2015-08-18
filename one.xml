@@ -1,0 +1,30 @@
+<exist:result xmlns:exist="http://exist.sourceforge.net/NS/exist" exist:hits="28" exist:start="1" exist:count="28">
+    <attr value="1" name="Academics" base="Knowledge"/>
+    <attr value="0" name="Art" base="Craft/Knowledge"/>
+    <attr value="2" name="Athletics" base="Physical"/>
+    <attr value="0" name="Burglary" base="Subterfuge"/>
+    <attr value="1" name="Contacting" base="Social"/>
+    <attr value="1" name="Deceit" base="Social"/>
+    <attr value="1" name="Drive" base="Mundane"/>
+    <attr value="2" name="Empathy" base="Social/Perception"/>
+    <attr value="3" name="Endurance" base="Physical"/>
+    <attr value="5" name="Engineering" base="Craft"/>
+    <attr value="2" name="Fists" base="Combat"/>
+    <attr value="0" name="Gambling" base="Mundane"/>
+    <attr value="4" name="Guns" base="Combat"/>
+    <attr value="1" name="Intimidation" base="Social"/>
+    <attr value="3" name="Investigation" base="Perception"/>
+    <attr value="4" name="Leadership" base="Social"/>
+    <attr value="1" name="Might" base="Physical"/>
+    <attr value="2" name="Mysteries" base="Knowledge"/>
+    <attr value="0" name="Pilot" base="Mundane"/>
+    <attr value="3" name="Rapport" base="Social"/>
+    <attr value="3" name="Resolve" base="Social"/>
+    <attr value="1" name="Resources" base="Mundane"/>
+    <attr value="0" name="Science" base="Knowledge"/>
+    <attr value="0" name="Sleight of Hand" base="Subterfuge"/>
+    <attr value="1" name="Stealth" base="Subterfuge"/>
+    <attr value="2" name="Survival" base="Mundane"/>
+    <attr value="7" name="Weapons" base="Combat"/>
+    <attr value="2" name="Alertness" base="Perception"/>
+</exist:result>
