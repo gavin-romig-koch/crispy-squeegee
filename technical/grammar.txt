@@ -1,0 +1,34 @@
+
+lets look at what it would take to be able to encode BNF like expressions directly in Python or Javascipt.
+
+
+G = a G b | c
+
+becomes something like
+
+One problem is that in BNF, 'symbol' spaces 'symbol' means parse the first symbol and if that matches parse the second symbol.
+
+
+G = ('a' + G + 'b') | 'c'
+
+
+
+Another problem is that this is recursive.  A 'G' is recursively defined upon itself.  Not endlessly recusively, it does bottom out.   The only way to do recursion in Javascript is using functions.
+
+
+function G() { return ('a' + G() + 'b') | 'c'; }
+
+function G() { return (Grammar('a') + G() + Grammar('b')) | Grammar('c'); }
+
+
+
+G() is a grammar.  The main thing we want to do with a grammar thing we want to do with a grammar is match it against a string.  Given a string, does it match the grammar (true/false).
+
+s = "aaacbb"
+G().match(s)
+
+Let's talk about why it is necessary to do this (possibly) "funny looking" G().match, rather than say
+G.match(s).  It has to do with the fact that we want Grammar + Grammar and Grammar | Grammar each to produce a new Grammar.  We want Grammar to be a class/type that supports both match and + and |.
+
+
+

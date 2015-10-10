@@ -1,0 +1,33 @@
+
+
+More often then not i think about goals in the long term, far oft, somewhat pipedream, "What would this look like if it were perfect?" ways.  And then work back from there to "What should we do next on the path to that?".  More often then not this gets me into trouble, but it's still the way i think.
+
+For Insights, for customers, in the user app, we want to enable the tracking of results for a wide variaty of different things:
+   running machines, running containers, running virtual machines,
+   images (for containers, machines, virtual machines),
+   clusters (of machines, containers, ...), pods, multi-server applications,
+   trees of images/containers/machines
+      (a set of things derived from one image (both the problems they have in common and the problems they individually have).
+
+Individual things, and Groups of things, Groups of things that are similar in some ways, and different in some ways.
+
+
+In some cases these things are individuals (a single machine, image, or container), in others they are related multiples that may or may not be expected to have the same contents or results.  They are related by depedancy or definition.   
+
+Tracking is an important aspect of this.  you care about a specific set of things. even thow a thing is wholesale replaced by a new version of itself (a thing gets rebuilt) it is still the same thing to you.
+
+Every management application faces the same issues.
+
+currently in the app we display the latest results for the list of currently registered machines.  only support implictly by giving each machine a unique name during registration.
+
+we want to enable tracking of lots of different kinds of things.  the rules for deciding what is the next version of a thing is different for different kinds of things.
+
+we want to enable users to tell us which of their things they want to track.
+
+we want to enable users to tell us which things to track as a group of related things.
+
+we don't want to try for full generality of the above all at once.  Instead we pick a few specific kinds of things we want to support; the replacement rule would be fixed and implicit for the kind to thing; and groups are treated a kind of thing rather than as way to create arbitrary groupings).
+
+since we want to integrate into CFME, maybe we base our initial list of supported kinds of things on the list of things supported by CFME.
+
+
