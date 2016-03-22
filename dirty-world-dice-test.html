@@ -30,7 +30,6 @@
         Identity: <input id="Identity" type="text" value="0"></input>
         Quality: <input id="Quality" type="text" value="0"></input>
         Bonus: <input id="Bonus" type="text" value="0"></input>
-        Pool: <input id="Pool" type="text" value="0"></input>
       </span>
     </div>
     <div id="setIdentity">
@@ -69,7 +68,7 @@
     </svg>		
     <div>
       <div class="left">
-        <input type="button" value="Generosity" onclick="SetValue('Identity',ValueOf('Generosity'))"></input>
+        <input type="button" value="Generosity" onclick="SetValue('Quality',ValueOf('Generosity'))"></input>
         <br>
         <span>
           <input type="button" value="+" onclick="bump_up('Generosity','Selfishness')"></input>
@@ -80,13 +79,13 @@
       </div>
       <div class="right">
         <span>
-          <input type="button" value="<" onclick="slide('Selfishness','Generosity)"></input>
-          <input type="button" value="+" onclick="bump_up('Selfishness','Generosity)"></input>
+          <input type="button" value="<" onclick="slide('Selfishness','Generosity')"></input>
+          <input type="button" value="-" onclick="bump_down('Selfishness','Generosity')"></input>
           <input id="Selfishness" type="text" value="0"></input>
-          <input type="button" value="-" onclick="bump_down('Selfishness','Generosity)"></input>
+          <input type="button" value="+" onclick="bump_up('Selfishness','Generosity')"></input>
         </span>
         <br>
-        <input type="button" value="Selfishness" onclick="SetValue('Identity',ValueOf('Selfishness'))"></input>
+        <input type="button" value="Selfishness" onclick="SetValue('Quality',ValueOf('Selfishness'))"></input>
       </div>
     </div>
   </div>

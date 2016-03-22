@@ -117,7 +117,7 @@ function houses_button_click(theButton)
 function pairs_to_string(array) {
     var result = "";
     for (var each = 0; each < array.length; each += 1) {
-        result += " " + array[each][0] + "@" + array[each][1];
+        result += " " + array[each][0] + "x" + array[each][1];
     }
     return result;
 }
@@ -146,8 +146,8 @@ function dirty_world_roll(ndice)
 
     resultString = ((result.length > 0) ? "success" : "failure" ) +
         pairs_to_string(result) + "    " +
-        "(" + rolls.toString() + ")";
-        //"[" + counts.toString() + "]";
+        "(" + rolls.toString() + ")" +
+        " pool " + ndice;
     return [result, resultString];
 }
 function dirty_world_button_click(theButton)
@@ -156,7 +156,6 @@ function dirty_world_button_click(theButton)
     var quality = parseInt(document.getElementById("Quality").value);
     var bonus = parseInt(document.getElementById("Bonus").value);
     var pool = identity + quality + bonus;
-    SetValue('Pool', pool);
     ReplaceAllChildren($('rollresult'),MakeText(dirty_world_roll(pool)[1]));
 }
 
